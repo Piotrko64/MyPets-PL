@@ -11,7 +11,7 @@ const Blog = ({match}) => {
   useEffect(()=>{
     fetch('https://mypetspiotrko64.netlify.app/database.json')
     .then(response => response.json())
-    .then(json => setArrays(json))
+    .then(json => {setArrays(json), console.log(json)})
    
   },[type])
   
