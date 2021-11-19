@@ -9,7 +9,7 @@ const Blog = ({match}) => {
   const [arrays, setArrays] = useState([]);
 
   useEffect(()=>{
-    fetch('http://piotrko88.ct8.pl/phpconnect.php')
+    fetch('https://mypetspiotrko64.netlify.app/database.json')
     .then(response => response.json())
     .then(json => setArrays(json))
    
