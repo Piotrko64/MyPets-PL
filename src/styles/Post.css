@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.array__img{
+    min-height: 400px;
+    height: 40vh;
+    object-fit: cover;
+    background-color: rgb(0 152 255 / 100%);
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.array__Title{
+    position: absolute;
+    font-size: 90px;
+    width: 100%;
+    top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Lato';
+        color: white;
+        text-align: center;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+.array__intro{
+    text-align: center;
+    width: 100%;
+    display: flex;
+justify-content: center;
+padding-bottom: 10px !important;
+}
+.array__text{
+    padding-top: 10px !important;
+    text-align: justify;
+    font-family: 'Lato';
+    font-size: 26px;
+}
+.article__array{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+button{
+    font-size: 26px;
+    background: rgb(0 152 255 / 100%);;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover{
+    background: rgb(0 152 255 / 85%);;
+}
+.array__text hr{
+    height: 5px;
+    background: cornflowerblue;
+    border:none;
+    margin-bottom: 10px !important;
+}
+@media (max-width:1200px) {
+    
+    .array__Title{
+       
+        font-size: 80px;
+        
+    }
+    .array__text{
+        padding-top: 15px !important;
+        
+        font-size: 24px;
+    }
+    button{
+        font-size: 24px;
+        
+    }
+}
+@media (max-width:900px) {
+    
+    .array__Title{
+       
+        font-size: 70px;
+        
+    }
+    .array__text{
+        padding-top: 15px !important;
+        
+        font-size: 22px;
+    }
+    button{
+        font-size: 22px;
+        
+    }
+    
+}
+@media (max-width:650px) {
+    
+    .array__Title{
+       
+        font-size: 60px;
+        
+    }
+    .array__text{
+        padding-top: 15px !important;
+        
+        font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        
+    }
+    
+}
+@media (max-width:580px) {
+    
+    .array__Title{
+       
+        font-size: 50px;
+        
+    }
+    .array__text{
+        padding-top: 10px !important;
+        
+        font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        
+    }
+    
+}

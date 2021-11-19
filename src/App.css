@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.padding{
+  padding: 0 30px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: row;
+  
+ 
+}
+nav li{
+  list-style-type: none;
+  
+}
+
+
+
+ nav li a{
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+transition: all .5s ease;
+position: relative;
+
+}
+nav li a::after{
+  content:'';
+  width: 0%;
+  height: 3.6px;
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease ;
+  border-radius: 2px;
+}
+
+li a:hover::after{
+  content: '';
+  width: 60%;
+}
+li a.active::after {
+  content: '';
+  width: 100%;
+}
+
+.header--contain{
+position: absolute;
+}
+
+
+
+.photo-enter{
+  opacity: 0.5;
+ 
+}
+.photo-exit{
+  opacity: 0.5;
+  
+}
+.photo-enter-active{
+  opacity: 1;
+  
+}
+.photo-exit-active{
+  opacity: 1;
+  
+}
+.photo-enter-active,
+.photo-exit-active{
+  transition: all .3s !important;
+ 
+}
+
+@media (max-width:1200px) {
+.padding{
+  padding: 0 20px;
+}
+}
+@media (max-width:900px) {
+  .padding{
+    padding: 0 10px;
+  }
+  }
