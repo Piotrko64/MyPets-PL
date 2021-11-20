@@ -24,9 +24,9 @@ const Post = ({match},props) => {
     console.log(thisID);
     
     
-    let newar = arrays.filter(array => array._id===match.params.id);
+    let newar = arrays.filter(array => array._id===thisID);
     
-    console.log(newar)
+    console.log(newar);
     
     
     return (
@@ -36,13 +36,13 @@ const Post = ({match},props) => {
         {
         newar.map(array=>
             <article className="article__array">
-<div className="array__img" style={{ backgroundImage: `url(../${array.Image})` }}>
+<div className="array__img" style={{ backgroundImage: `url(../${array.image})` }}>
             <h1 className="array__Title">{array.Title}</h1>
             </div>
             <div className="array__text padding">
-            <span className="array__intro">{array.Introduction}</span>
+            <span className="array__intro">{array.introduction}</span>
             <hr></hr>
-            {array.GeneralText}
+            {array.content}
             </div>
             <Link to="/Blog"><button> Wróć! </button></Link>
             </article>
