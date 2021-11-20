@@ -33,7 +33,7 @@ const Post = ({match},props) => {
         newar.map(array=>
             <article className="article__array">
 <div className="array__img" style={{ backgroundImage: `url(../${array.image})` }}>
-            <h1 className="array__Title">{array.Title}</h1>
+            <h1 className="array__Title">{array.title}</h1>
             </div>
             <div className="array__text padding">
             <span className="array__intro">{array.introduction}</span>
