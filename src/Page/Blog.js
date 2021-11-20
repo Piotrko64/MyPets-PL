@@ -32,7 +32,7 @@ const Blog = () => {
        <div className="blog__img">
        <img src={`./${array.image}`} alt="blog img"/>
      </div>
-     <div className="blog__containertext"><div className="blog__title">{array.title}</div> <div className="blog__intro">{array.Introduction}</div>
+     <div className="blog__containertext"><div className="blog__title">{array.title}</div> <div className="blog__intro">{array.introduction}</div>
      <Link to={`/post/${array._id}`}><strong>Czytaj dalej</strong></Link>
      </div>
      </div>
