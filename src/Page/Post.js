@@ -21,12 +21,8 @@ const Post = ({match},props) => {
   })
     
     let thisID = match.params.id;
-    console.log(thisID);
-    
-    
     let newar = arrays.filter(array => array._id===thisID);
     
-    console.log(newar);
     
     
     return (
