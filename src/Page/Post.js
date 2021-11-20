@@ -1,23 +1,30 @@
 import React, { useState , useEffect} from 'react';
 import '../styles/Post.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import axios from '../axiosinstance'
+
 const Post = ({match},props) => {
-    const [type] = useState('posts');
+    
     const [arrays, setArrays] = useState([]);
   
-    useEffect(()=>{
-      fetch('http://piotrko88.ct8.pl/phpconnect.php')
-      .then(response => response.json())
-      .then(json => setArrays(json))
-      .catch(console.log("nie ma"))
-     
-    },[type])
+    
+  async function fetchPosts(){
+    const res = await axios.get('/post');
+    const posts= res.data;
+    console.log(posts)
+    await setArrays(posts);
+    
+  }
+  useEffect(()=>{
+    fetchPosts();
+   
+  })
     
     let thisID = match.params.id;
     console.log(thisID);
     
     
-    let newar = arrays.filter(array => array.Id===match.params.id);
+    let newar = arrays.filter(array => array._id===match.params.id);
     
     console.log(newar)
     

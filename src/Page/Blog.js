@@ -1,19 +1,24 @@
 import React, { useState , useEffect} from 'react';
 import '../styles/Blog.css';
 import {Link} from 'react-router-dom'
+import axios from '../axiosinstance'
 
-
-const Blog = ({match}) => {
+const Blog = () => {
   
-    const [type] = useState('posts');
+    
   const [arrays, setArrays] = useState([]);
 
+  async function fetchPosts(){
+    const res = await axios.get('/post');
+    const posts= res.data;
+    console.log(posts)
+    await setArrays(posts);
+    
+  }
   useEffect(()=>{
-    fetch('https://mypetspiotrko64.netlify.app/database.json')
-    .then(response => response.json())
-    .then(json => {setArrays(json), console.log(json)})
+    fetchPosts();
    
-  },[type])
+  })
   
   
     return(
@@ -25,10 +30,10 @@ const Blog = ({match}) => {
        
        <div className="blog__post">
        <div className="blog__img">
-       <img src={`./${array.Image}`} alt="blog img"/>
+       <img src={`./${array.image}`} alt="blog img"/>
      </div>
-     <div className="blog__containertext"><div className="blog__title">{array.Title}</div> <div className="blog__intro">{array.Introduction}</div>
-     <Link to={`/post/${array.Id}`}><strong>Czytaj dalej</strong></Link>
+     <div className="blog__containertext"><div className="blog__title">{array.title}</div> <div className="blog__intro">{array.Introduction}</div>
+     <Link to={`/post/${array._id}`}><strong>Czytaj dalej</strong></Link>
      </div>
      </div>
      
