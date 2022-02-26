@@ -29,7 +29,7 @@ const Pets = () => {
     return(
    <>
  <section className="Pets">
-<div className="Pets__one padding" style={{ backgroundImage: `url(${BigBrysiu})` }}><div className="Pets__width"><div className="Pets__name">Brysiek </div> <div className="Pets__picture"> <img src={Brysiu} className="Pets__img" alt="my dog"/></div> </div>
+<div className="Pets__one padding" style={{ backgroundImage: `url(${BigBrysiu})` }}><div className="Pets__width"><div className="Pets__name">Brysiek! </div> <div className="Pets__picture"> <img src={Brysiu} className="Pets__img" alt="my dog"/></div> </div>
 </div>
 <div className="Pets__one padding" style={{ backgroundImage: `url(${BigLuka})` }}><div className="Pets__width"><div className="Pets__picture"> <img src={Luka} className="Pets__img" alt="my dog"/></div><div className="Pets__name">Luka </div>  </div>
      </div>
